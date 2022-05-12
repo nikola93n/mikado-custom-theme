@@ -6,16 +6,28 @@
     <div class="container">
         <div class="row align-items-lg-center">
             <div class="col-xs-12 col-lg-6">
-                <h1 class="mt-5 pt-3 mt-lg-0 pt-lg-0">Easiest Way to Create <span>Website</span></h1>
-                <p class="my-4 lh-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-                    eveniet iusto atque quos inventore reprehenderit nulla veniam nam facilis vel, suscipit
-                    earum. Officia, similique? Architecto voluptas consequatur adipisci earum cumque?</p>
-                <button class="btn btn-primary">Get Started</button>
+                <?php $title = get_field( 'title', false, false ); ?>
+                <?php if ( ! empty( $title ) ) : ?>
+                <h1 class="mt-5 pt-3 mt-lg-0 pt-lg-0"><?php echo $title; ?></h1>
+                <?php endif; ?>
+                <?php $paragraph = get_field( 'paragraph', false, false ); ?>
+                <?php if ( ! empty( $paragraph ) ) : ?>
+                <p class="my-4 lh-lg"><?php echo $paragraph; ?></p>
+                <?php endif; ?>
+                <?php $button = get_field('button'); ?>
+                <?php $button_url = get_field('button_url'); ?>
+                <?php if(!empty($button)) : ?>
+                <?php if(!empty($button_url)) : ?>
+                <a href="<?php echo $button_url; ?>" class="btn btn-primary"><?php echo $button; ?></a>
+                <?php endif; ?>
+                <?php endif; ?>
             </div>
-            <div class="col-xs-12 col-lg-6 justify-content-evenly spinning" data-tilt data-tilt-full-page-listening>
-                <img src="<?php echo get_template_directory_uri()?>/assets/images/hero-image.png" alt=""
-                    class="img-fluid hero-img mx-auto py-5 pb-lg-5">
-                <!-- <div class="circle-1"></div>                                       -->
+            <?php $activate_tilt = get_field ('activate_tilt');?>
+            <div class="col-xs-12 col-lg-6 justify-content-evenly" <?php echo $activate_tilt; ?>>
+                <?php $hero_image = get_field( 'hero_image' ); ?>
+                <?php if ( ! empty( $hero_image ) ) : ?> <img src="<?php echo $hero_image['url']?>"
+                    alt="<?php echo $hero_image['alt'] ?>" class="img-fluid hero-img mx-auto py-5 pb-lg-5">
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -27,28 +39,92 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="assets/images/10.png" alt="" class="img-fluid">
+                <?php $about_image = get_field ( 'about_image' ); ?>
+                <?php if(!empty($about_image)) : ?> <img src="<?php echo $about_image['url'] ?>"
+                    alt="<?php echo $about_image['alt']; ?>" class="img-fluid">
+                <?php endif;?>
             </div>
             <div class="col-md-6 d-flex flex-column justify-content-center">
-                <p class="heading-top">Basic info about componay</p>
-                <h2>Web Design Team In Novi Sad</h2>
-                <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet eos
-                    necessitatibus maxime assumenda aspernatur corrupti nobis provident facilis praesentium.</p>
+                <?php $about_info = get_field('about_info'); ?>
+                <?php if(!empty($about_info)) : ?>
+                <p class="heading-top"><?php echo $about_info; ?></p>
+                <?php endif; ?>
+                <?php $about_title = get_field('about_title', false, false); ?>
+                <?php if(!empty($about_title)) : ?>
+                <h2><?php echo $about_title; ?></h2>
+                <?php endif; ?>
+                <?php $about_paragraph = get_field ( 'about_paragraph', false, false ); ?>
+                <?php if(!empty($about_paragraph)) : ?>
+                <p class="py-3"><?php echo $about_paragraph; ?></p>
+                <?php endif; ?>
                 <ul class="pe-5">
+
+                    <?php $about_icons_first_line_icon = get_field ( 'about_icons_first_line_icon', false, false ); ?>
+                    <?php $about_icons_first_line_text = get_field ( 'about_icons_first_line_text', false, false ); ?>
+                    <?php if(!empty($about_icons_first_line_icon)) : ?>
+                    <?php if(!empty($about_icons_first_line_text)) : ?>
+
                     <li class="d-flex align-items-center"><span><i
-                                class="bi bi-check-circle-fill me-3"></i></span><span>Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Quaerat, pariatur! Quibusdam nobis voluptate
-                            dolorum.</span></li>
+                                class="<?php echo $about_icons_first_line_icon; ?>"></i></span><span><?php echo $about_icons_first_line_text; ?></span>
+                    </li>
+                    <?php endif; ?>
+                    <?php endif; ?>
+
+                    <?php $about_icons_second_line_icon = get_field ( 'about_icons_second_line_icon', false, false ); ?>
+                    <?php $about_icons_second_line_text = get_field ( 'about_icons_second_line_text', false, false ); ?>
+                    <?php if(!empty($about_icons_second_line_icon)) : ?>
+                    <?php if(!empty($about_icons_second_line_text)) : ?>
+
                     <li class="d-flex align-items-center"><span><i
-                                class="bi bi-check-circle-fill me-3"></i></span><span>Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Amet, quas?</span></li>
+                                class="<?php echo $about_icons_second_line_icon; ?>"></i></span><span><?php echo $about_icons_second_line_text; ?></span>
+                    </li>
+                    <?php endif; ?>
+                    <?php endif; ?>
+
+                    <?php $about_icons_third_line_icon = get_field ( 'about_icons_third_line_icon', false, false ); ?>
+                    <?php $about_icons_third_line_text = get_field ( 'about_icons_third_line_text', false, false ); ?>
+                    <?php if(!empty($about_icons_third_line_icon)) : ?>
+                    <?php if(!empty($about_icons_third_line_text)) : ?>
+
                     <li class="d-flex align-items-center"><span><i
-                                class="bi bi-check-circle-fill me-3"></i></span><span>Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Nihil non molestias ipsum facilis.</span></li>
+                                class="<?php echo $about_icons_third_line_icon; ?>"></i></span><span><?php echo $about_icons_third_line_text; ?></span>
+                    </li>
+                    <?php endif; ?>
+                    <?php endif; ?>
+
+                    <?php $about_icons_fourth_line_icon = get_field ( 'about_icons_fourth_line_icon', false, false ); ?>
+                    <?php $about_icons_fourth_line_text = get_field ( 'about_icons_fourth_line_text', false, false ); ?>
+                    <?php if(!empty($about_icons_fourth_line_icon)) : ?>
+                    <?php if(!empty($about_icons_fourth_line_text)) : ?>
+
                     <li class="d-flex align-items-center"><span><i
-                                class="bi bi-check-circle-fill me-3"></i></span><span>Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Fugiat voluptas consequatur quas voluptate ratione quis
-                            rem in?</span></li>
+                                class="<?php echo $about_icons_fourth_line_icon; ?>"></i></span><span><?php echo $about_icons_fourth_line_text; ?></span>
+                    </li>
+                    <?php endif; ?>
+                    <?php endif; ?>
+
+                    <?php $about_icons_fifth_line_icon = get_field ( 'about_icons_fifth_line_icon', false, false ); ?>
+                    <?php $about_icons_fifth_line_text = get_field ( 'about_icons_fifth_line_text', false, false ); ?>
+                    <?php if(!empty($about_icons_fifth_line_icon)) : ?>
+                    <?php if(!empty($about_icons_fifth_line_text)) : ?>
+
+                    <li class="d-flex align-items-center"><span><i
+                                class="<?php echo $about_icons_fifth_line_icon; ?>"></i></span><span><?php echo $about_icons_fifth_line_text; ?></span>
+                    </li>
+                    <?php endif; ?>
+                    <?php endif; ?>
+
+                    <?php $about_icons_sixth_line_icon = get_field ( 'about_icons_sixth_line_icon', false, false ); ?>
+                    <?php $about_icons_sixth_line_text = get_field ( 'about_icons_sixth_line_text', false, false ); ?>
+                    <?php if(!empty($about_icons_sixth_line_icon)) : ?>
+                    <?php if(!empty($about_icons_sixth_line_text)) : ?>
+
+                    <li class="d-flex align-items-center"><span><i
+                                class="<?php echo $about_icons_sixth_line_icon; ?>"></i></span><span><?php echo $about_icons_sixth_line_text; ?></span>
+                    </li>
+                    <?php endif; ?>
+                    <?php endif; ?>
+
                 </ul>
             </div>
         </div>
@@ -56,15 +132,27 @@
 </section>
 <!-- End Info Section -->
 <!-- Start Counter Section -->
-<section id="awards" style="background-image: url(images/world-map.webp); background-color: rgba(5, 187, 117, .04);">
+<?php $background_image_and_color_background_image = get_field('background_image_and_color_background_image'); ?>
+<?php $background_image_and_color_background_color = get_field('background_image_and_color_background_color'); ?>
+<section id="awards" style="background-image: url(<?php echo $background_image_and_color_background_image['url']; ?>); background-color:
+<?php echo $background_image_and_color_background_color; ?>">
     <div class="container">
         <div class="row">
+
+            <?php $counter_section_one_icon = get_field ( 'counter_section_one_icon', false, false ); ?>
+
+
+
+
             <div class="col-md-3 d-flex flex-column align-items-center justify-content-center">
-                <div class="icon"><i class="bi bi-check2-circle"></i></div>
+                <div class="icon"><i class="<?php echo $counter_section_one_icon; ?>"></i></div>
                 <div class="number"><span data-purecounter-start="0" data-purecounter-end="30" class="purecounter"
                         data-purecounter-duration="1" data-purecounter-once="false">30</span></div>
                 <div class="text">Completed Projects</div>
             </div>
+
+
+
             <div class="col-md-3 d-flex flex-column align-items-center justify-content-center">
                 <div class="icon"><i class="bi bi-geo-alt"></i></div>
                 <div class="number"><span data-purecounter-start="0" data-purecounter-end="5" class="purecounter"
