@@ -218,97 +218,284 @@
             </div>
             <div class="col-lg-6">
                 <ul class="services-skill">
+
+                    <?php $first_progress_bar_title = get_field('first_progress_bar_title', false, false) ?>
+                    <?php if(!empty($first_progress_bar_title)) : ?>
+
+                    <?php $first_progress_bar_start_number = get_field('first_progress_bar_start_number', false, false) ?>
+                    <?php if(!empty($first_progress_bar_start_number)) : ?>
+
+                    <?php $first_progress_bar_end_number = get_field('first_progress_bar_end_number', false, false) ?>
+                    <?php if(!empty($first_progress_bar_end_number)) : ?>
+
+                    <?php $first_progress_bar_animation_duration = get_field('first_progress_bar_animation_duration', false, false) ?>
+                    <?php if(!empty($first_progress_bar_animation_duration)) : ?>
+
+                    <?php $first_progress_bar_animation_max_value = get_field('first_progress_bar_animation_max_value', false, false) ?>
+                    <?php if(!empty($first_progress_bar_animation_max_value)) : ?>
+
+
                     <li class="progress-item">
                         <h6 class="d-flex justify-content-between">
-                            Website Design
-                            <span><span data-purecounter-start="0" data-purecounter-end="80" class="purecounter"
-                                    data-purecounter-duration="1.4" data-purecounter-once="true">80</span>%</span>
+                            <?php echo $first_progress_bar_title; ?>
+                            <span><span data-purecounter-start="<?php echo $first_progress_bar_start_number; ?>"
+                                    data-purecounter-end="<?php echo $first_progress_bar_end_number; ?>"
+                                    class="purecounter"
+                                    data-purecounter-duration="<?php echo $first_progress_bar_animation_duration; ?>"
+                                    data-purecounter-once="true"><?php echo $first_progress_bar_end_number; ?></span>%</span>
                         </h6>
                         <div class="progress">
-                            <span class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                aria-valuemax="100" data-percent="80"></span>
+                            <span class="progress-bar" role="progressbar"
+                                aria-valuenow="<?php echo $first_progress_bar_end_number; ?>"
+                                aria-valuemin="<?php echo $first_progress_bar_start_number; ?>"
+                                aria-valuemax="<?php echo $first_progress_bar_animation_max_value; ?>"
+                                data-percent="<?php echo $first_progress_bar_end_number; ?>"></span>
                         </div>
                     </li>
+                    <?php endif; ?>
+                    <?php endif; ?>
+                    <?php endif; ?>
+                    <?php endif; ?>
+                    <?php endif; ?>
+
+
+
+                    <?php $second_progress_bar_title = get_field('second_progress_bar_title', false, false) ?>
+                    <?php if(!empty($second_progress_bar_title)) : ?>
+
+                    <?php $second_progress_bar_start_number = get_field('second_progress_bar_start_number', false, false) ?>
+                    <?php if(!empty($second_progress_bar_start_number)) : ?>
+
+                    <?php $second_progress_bar_end_number = get_field('second_progress_bar_end_number', false, false) ?>
+                    <?php if(!empty($second_progress_bar_end_number)) : ?>
+
+                    <?php $second_progress_bar_animation_duration = get_field('second_progress_bar_animation_duration', false, false) ?>
+                    <?php if(!empty($second_progress_bar_animation_duration)) : ?>
+
+                    <?php $second_progress_bar_animation_max_value = get_field('second_progress_bar_animation_max_value', false, false) ?>
+                    <?php if(!empty($second_progress_bar_animation_max_value)) : ?>
+
+
                     <li class="progress-item">
                         <h6 class="d-flex justify-content-between">
-                            App Design
-                            <span><span data-purecounter-start="0" data-purecounter-end="60" class="purecounter"
-                                    data-purecounter-duration="1.4" data-purecounter-once="true">60</span>%</span>
+                            <?php echo $second_progress_bar_title; ?>
+                            <span><span data-purecounter-start="<?php echo $second_progress_bar_start_number; ?>"
+                                    data-purecounter-end="<?php echo $second_progress_bar_end_number; ?>"
+                                    class="purecounter"
+                                    data-purecounter-duration="<?php echo $second_progress_bar_animation_duration; ?>"
+                                    data-purecounter-once="true"><?php echo $second_progress_bar_end_number; ?></span>%</span>
                         </h6>
                         <div class="progress">
-                            <span class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                                aria-valuemax="100" data-percent="60"></span>
+                            <span class="progress-bar" role="progressbar"
+                                aria-valuenow="<?php echo $second_progress_bar_end_number; ?>"
+                                aria-valuemin="<?php echo $second_progress_bar_start_number; ?>"
+                                aria-valuemax="<?php echo $second_progress_bar_animation_max_value; ?>"
+                                data-percent="<?php echo $second_progress_bar_end_number; ?>"></span>
                         </div>
                     </li>
+                    <?php endif; ?>
+                    <?php endif; ?>
+                    <?php endif; ?>
+                    <?php endif; ?>
+                    <?php endif; ?>
+
+
+
+                    <?php $third_progress_bar_title = get_field('third_progress_bar_title', false, false) ?>
+                    <?php if(!empty($third_progress_bar_title)) : ?>
+
+                    <?php $third_progress_bar_start_number = get_field('third_progress_bar_start_number', false, false) ?>
+                    <?php if(!empty($third_progress_bar_start_number)) : ?>
+
+                    <?php $third_progress_bar_end_number = get_field('third_progress_bar_end_number', false, false) ?>
+                    <?php if(!empty($third_progress_bar_end_number)) : ?>
+
+                    <?php $third_progress_bar_animation_duration = get_field('third_progress_bar_animation_duration', false, false) ?>
+                    <?php if(!empty($third_progress_bar_animation_duration)) : ?>
+
+                    <?php $third_progress_bar_animation_max_value = get_field('third_progress_bar_animation_max_value', false, false) ?>
+                    <?php if(!empty($third_progress_bar_animation_max_value)) : ?>
+
+
                     <li class="progress-item">
                         <h6 class="d-flex justify-content-between">
-                            Web Development
-                            <span><span data-purecounter-start="0" data-purecounter-end="80" class="purecounter"
-                                    data-purecounter-duration="1.4" data-purecounter-once="true">80</span>%</span>
+                            <?php echo $third_progress_bar_title; ?>
+                            <span><span data-purecounter-start="<?php echo $third_progress_bar_start_number; ?>"
+                                    data-purecounter-end="<?php echo $third_progress_bar_end_number; ?>"
+                                    class="purecounter"
+                                    data-purecounter-duration="<?php echo $third_progress_bar_animation_duration; ?>"
+                                    data-purecounter-once="true"><?php echo $third_progress_bar_end_number; ?></span>%</span>
                         </h6>
                         <div class="progress">
-                            <span class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                aria-valuemax="100" data-percent="80"></span>
+                            <span class="progress-bar" role="progressbar"
+                                aria-valuenow="<?php echo $third_progress_bar_end_number; ?>"
+                                aria-valuemin="<?php echo $third_progress_bar_start_number; ?>"
+                                aria-valuemax="<?php echo $third_progress_bar_animation_max_value; ?>"
+                                data-percent="<?php echo $third_progress_bar_end_number; ?>"></span>
                         </div>
                     </li>
+                    <?php endif; ?>
+                    <?php endif; ?>
+                    <?php endif; ?>
+                    <?php endif; ?>
+                    <?php endif; ?>
+
+
+
+                    <?php $fourth_progress_bar_title = get_field('fourth_progress_bar_title', false, false) ?>
+                    <?php if(!empty($fourth_progress_bar_title)) : ?>
+
+                    <?php $fourth_progress_bar_start_number = get_field('fourth_progress_bar_start_number', false, false) ?>
+                    <?php if(!empty($fourth_progress_bar_start_number)) : ?>
+
+                    <?php $fourth_progress_bar_end_number = get_field('fourth_progress_bar_end_number', false, false) ?>
+                    <?php if(!empty($fourth_progress_bar_end_number)) : ?>
+
+                    <?php $fourth_progress_bar_animation_duration = get_field('fourth_progress_bar_animation_duration', false, false) ?>
+                    <?php if(!empty($fourth_progress_bar_animation_duration)) : ?>
+
+                    <?php $fourth_progress_bar_animation_max_value = get_field('fourth_progress_bar_animation_max_value', false, false) ?>
+                    <?php if(!empty($fourth_progress_bar_animation_max_value)) : ?>
+
+
                     <li class="progress-item">
                         <h6 class="d-flex justify-content-between">
-                            Web Design
-                            <span><span data-purecounter-start="0" data-purecounter-end="80" class="purecounter"
-                                    data-purecounter-duration="1.4" data-purecounter-once="true">80</span>%</span>
+                            <?php echo $fourth_progress_bar_title; ?>
+                            <span><span data-purecounter-start="<?php echo $fourth_progress_bar_start_number; ?>"
+                                    data-purecounter-end="<?php echo $fourth_progress_bar_end_number; ?>"
+                                    class="purecounter"
+                                    data-purecounter-duration="<?php echo $fourth_progress_bar_animation_duration; ?>"
+                                    data-purecounter-once="true"><?php echo $fourth_progress_bar_end_number; ?></span>%</span>
                         </h6>
                         <div class="progress">
-                            <span class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                aria-valuemax="100" data-percent="80"></span>
+                            <span class="progress-bar" role="progressbar"
+                                aria-valuenow="<?php echo $fourth_progress_bar_end_number; ?>"
+                                aria-valuemin="<?php echo $fourth_progress_bar_start_number; ?>"
+                                aria-valuemax="<?php echo $fourth_progress_bar_animation_max_value; ?>"
+                                data-percent="<?php echo $fourth_progress_bar_end_number; ?>"></span>
                         </div>
                     </li>
+                    <?php endif; ?>
+                    <?php endif; ?>
+                    <?php endif; ?>
+                    <?php endif; ?>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
         <!-- Team People -->
         <div class="row py-5">
+
+            <?php $team_member_one_image = get_field('team_member_one_image'); ?>
+            <?php if(!empty($team_member_one_image)) : ?>
+
+            <?php $team_member_one_name = get_field('team_member_one_name'); ?>
+
+            <?php $team_member_one_position = get_field('team_member_one_position'); ?>
+
+            <?php $team_member_one_first_network_icon = get_field('team_member_one_first_network_icon'); ?>
+            <?php $team_member_one_first_network_url = get_field('team_member_one_first_network_url'); ?>
+
+            <?php $team_member_one_second_network_icon = get_field('team_member_one_second_network_icon'); ?>
+            <?php $team_member_one_second_network_url = get_field('team_member_one_second_network_url'); ?>
+
+            <?php $team_member_one_third_network_icon = get_field('team_member_one_third_network_icon'); ?>
+            <?php $team_member_one_third_network_url = get_field('team_member_one_third_network_url'); ?>
+
             <div class="col-lg-4 col-md-6">
                 <div class="team-card">
-                    <img src="images/2.jpg" alt="" class="img-fluid">
+                    <img src="<?php echo $team_member_one_image['url']; ?>"
+                        alt="<?php $team_member_one_image['alt']; ?>" class="img-fluid">
                     <div class="team-detail">
-                        <h5 class="text-center">David Manager</h5>
-                        <p class="text-center">Company CEO</p>
+                        <h5 class="text-center"><?php echo $team_member_one_name; ?></h5>
+                        <p class="text-center"><?php echo $team_member_one_position; ?></p>
                         <ul class="d-flex justify-content-center">
-                            <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                            <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-                            <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                            <li><a href="<?php echo $team_member_one_first_network_url; ?>" target="_blank">
+                                    <i class="<?php echo $team_member_one_first_network_icon; ?>"></i></a></li>
+                            <li><a href="<?php echo $team_member_one_second_network_url; ?>" target="_blank">
+                                    <i class="<?php echo $team_member_one_second_network_icon; ?>"></i></a></li>
+                            <li><a href="<?php echo $team_member_one_third_network_url; ?>" target="_blank">
+                                    <i class="<?php echo $team_member_one_third_network_icon; ?>"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+            <?php endif; ?>
+
+
+            <?php $team_member_two_image = get_field('team_member_two_image'); ?>
+            <?php if(!empty($team_member_two_image)) : ?>
+
+            <?php $team_member_two_name = get_field('team_member_two_name'); ?>
+
+            <?php $team_member_two_position = get_field('team_member_two_position'); ?>
+
+            <?php $team_member_two_first_network_icon = get_field('team_member_two_first_network_icon'); ?>
+            <?php $team_member_two_first_network_url = get_field('team_member_two_first_network_url'); ?>
+
+            <?php $team_member_two_second_network_icon = get_field('team_member_two_second_network_icon'); ?>
+            <?php $team_member_two_second_network_url = get_field('team_member_two_second_network_url'); ?>
+
+            <?php $team_member_two_third_network_icon = get_field('team_member_two_third_network_icon'); ?>
+            <?php $team_member_two_third_network_url = get_field('team_member_two_third_network_url'); ?>
+
             <div class="col-lg-4 col-md-6">
                 <div class="team-card">
-                    <img src="images/6.jpg" alt="" class="img-fluid">
+                    <img src="<?php echo $team_member_two_image['url']; ?>"
+                        alt="<?php $team_member_two_image['alt']; ?>" class="img-fluid">
                     <div class="team-detail">
-                        <h5 class="text-center">Aleana Dian</h5>
-                        <p class="text-center">Creative Designer</p>
+                        <h5 class="text-center"><?php echo $team_member_two_name; ?></h5>
+                        <p class="text-center"><?php echo $team_member_two_position; ?></p>
                         <ul class="d-flex justify-content-center">
-                            <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                            <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-                            <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                            <li><a href="<?php echo $team_member_two_first_network_url; ?>" target="_blank">
+                                    <i class="<?php echo $team_member_two_first_network_icon; ?>"></i></a></li>
+                            <li><a href="<?php echo $team_member_two_second_network_url; ?>" target="_blank">
+                                    <i class="<?php echo $team_member_two_second_network_icon; ?>"></i></a></li>
+                            <li><a href="<?php echo $team_member_two_third_network_url; ?>" target="_blank">
+                                    <i class="<?php echo $team_member_two_third_network_icon; ?>"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 custom">
+            <?php endif; ?>
+
+
+
+            <?php $team_member_three_image = get_field('team_member_three_image'); ?>
+            <?php if(!empty($team_member_three_image)) : ?>
+
+            <?php $team_member_three_name = get_field('team_member_three_name'); ?>
+
+            <?php $team_member_three_position = get_field('team_member_three_position'); ?>
+
+            <?php $team_member_three_first_network_icon = get_field('team_member_three_first_network_icon'); ?>
+            <?php $team_member_three_first_network_url = get_field('team_member_three_first_network_url'); ?>
+
+            <?php $team_member_three_second_network_icon = get_field('team_member_three_second_network_icon'); ?>
+            <?php $team_member_three_second_network_url = get_field('team_member_three_second_network_url'); ?>
+
+            <?php $team_member_three_third_network_icon = get_field('team_member_three_third_network_icon'); ?>
+            <?php $team_member_three_third_network_url = get_field('team_member_three_third_network_url'); ?>
+
+            <div class="col-lg-4 col-md-6">
                 <div class="team-card">
-                    <img src="images/4.jpg" alt="" class="img-fluid">
+                    <img src="<?php echo $team_member_three_image['url']; ?>"
+                        alt="<?php $team_member_three_image['alt']; ?>" class="img-fluid">
                     <div class="team-detail">
-                        <h5 class="text-center">Mike Kongal</h5>
-                        <p class="text-center">Maketing Head</p>
+                        <h5 class="text-center"><?php echo $team_member_three_name; ?></h5>
+                        <p class="text-center"><?php echo $team_member_three_position; ?></p>
                         <ul class="d-flex justify-content-center">
-                            <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                            <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-                            <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                            <li><a href="<?php echo $team_member_three_first_network_url; ?>" target="_blank">
+                                    <i class="<?php echo $team_member_three_first_network_icon; ?>"></i></a></li>
+                            <li><a href="<?php echo $team_member_three_second_network_url; ?>" target="_blank">
+                                    <i class="<?php echo $team_member_three_second_network_icon; ?>"></i></a></li>
+                            <li><a href="<?php echo $team_member_three_third_network_url; ?>" target="_blank">
+                                    <i class="<?php echo $team_member_three_third_network_icon; ?>"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>
