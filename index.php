@@ -138,39 +138,68 @@
 <?php echo $background_image_and_color_background_color; ?>">
     <div class="container">
         <div class="row">
-
-            <?php $counter_section_one_icon = get_field ( 'counter_section_one_icon', false, false ); ?>
-
-
-
-
-            <div class="col-md-3 d-flex flex-column align-items-center justify-content-center">
-                <div class="icon"><i class="<?php echo $counter_section_one_icon; ?>"></i></div>
-                <div class="number"><span data-purecounter-start="0" data-purecounter-end="30" class="purecounter"
-                        data-purecounter-duration="1" data-purecounter-once="false">30</span></div>
-                <div class="text">Completed Projects</div>
-            </div>
-
-
+            <?php $numbers_section_one_first_icon = get_field('numbers_section_one_first_icon'); ?>
+            <?php $numbers_section_one_number = get_field('numbers_section_one_number'); ?>
+            <?php $numbers_section_one_first_description = get_field('numbers_section_one_first_description'); ?>
+            <?php if(!empty($numbers_section_one_first_icon)) : ?>
 
             <div class="col-md-3 d-flex flex-column align-items-center justify-content-center">
-                <div class="icon"><i class="bi bi-geo-alt"></i></div>
-                <div class="number"><span data-purecounter-start="0" data-purecounter-end="5" class="purecounter"
-                        data-purecounter-duration="1" data-purecounter-once="false">5</span></div>
-                <div class="text">Total Countries</div>
+                <div class="icon"><i class="<?php echo $numbers_section_one_first_icon; ?>"></i></div>
+                <div class="number"><span data-purecounter-start="0"
+                        data-purecounter-end="<?php echo $numbers_section_one_number; ?>" class="purecounter"
+                        data-purecounter-duration="1"
+                        data-purecounter-once="false"><?php echo $numbers_section_one_number; ?></span></div>
+                <div class="text"><?php echo $numbers_section_one_first_description; ?></div>
             </div>
+            <?php endif; ?>
+
+
+            <?php $numbers_section_two_first_icon = get_field('numbers_section_two_first_icon'); ?>
+            <?php $numbers_section_two_number = get_field('numbers_section_two_number'); ?>
+            <?php $numbers_section_two_first_description = get_field('numbers_section_two_first_description'); ?>
+            <?php if(!empty($numbers_section_two_first_icon)) : ?>
+
             <div class="col-md-3 d-flex flex-column align-items-center justify-content-center">
-                <div class="icon"><i class="bi bi-globe"></i></div>
-                <div class="number"><span data-purecounter-start="0" data-purecounter-end="4000" class="purecounter"
-                        data-purecounter-duration="1" data-purecounter-once="false">4000</span></div>
-                <div class="text">User Worldwide</div>
+                <div class="icon"><i class="<?php echo $numbers_section_two_first_icon; ?>"></i></div>
+                <div class="number"><span data-purecounter-start="0"
+                        data-purecounter-end="<?php echo $numbers_section_two_number; ?>" class="purecounter"
+                        data-purecounter-duration="1"
+                        data-purecounter-once="false"><?php echo $numbers_section_two_number; ?></span></div>
+                <div class="text"><?php echo $numbers_section_two_first_description; ?></div>
             </div>
+            <?php endif; ?>
+
+
+            <?php $numbers_section_three_first_icon = get_field('numbers_section_three_first_icon'); ?>
+            <?php $numbers_section_three_number = get_field('numbers_section_three_number'); ?>
+            <?php $numbers_section_three_first_description = get_field('numbers_section_three_first_description'); ?>
+            <?php if(!empty($numbers_section_three_first_icon)) : ?>
+
             <div class="col-md-3 d-flex flex-column align-items-center justify-content-center">
-                <div class="icon"><i class="bi bi-award"></i></div>
-                <div class="number"><span data-purecounter-start="0" data-purecounter-end="4" class="purecounter"
-                        data-purecounter-duration="1" data-purecounter-once="false">4</span></div>
-                <div class="text">Award Winners</div>
+                <div class="icon"><i class="<?php echo $numbers_section_three_first_icon; ?>"></i></div>
+                <div class="number"><span data-purecounter-start="0"
+                        data-purecounter-end="<?php echo $numbers_section_three_number; ?>" class="purecounter"
+                        data-purecounter-duration="1"
+                        data-purecounter-once="false"><?php echo $numbers_section_three_number; ?></span></div>
+                <div class="text"><?php echo $numbers_section_three_first_description; ?></div>
             </div>
+            <?php endif; ?>
+
+
+            <?php $numbers_section_four_first_icon = get_field('numbers_section_four_first_icon'); ?>
+            <?php $numbers_section_four_number = get_field('numbers_section_four_number'); ?>
+            <?php $numbers_section_four_first_description = get_field('numbers_section_four_first_description'); ?>
+            <?php if(!empty($numbers_section_four_first_icon)) : ?>
+
+            <div class="col-md-3 d-flex flex-column align-items-center justify-content-center">
+                <div class="icon"><i class="<?php echo $numbers_section_four_first_icon; ?>"></i></div>
+                <div class="number"><span data-purecounter-start="0"
+                        data-purecounter-end="<?php echo $numbers_section_four_number; ?>" class="purecounter"
+                        data-purecounter-duration="1"
+                        data-purecounter-once="false"><?php echo $numbers_section_four_number; ?></span></div>
+                <div class="text"><?php echo $numbers_section_four_first_description; ?></div>
+            </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>
@@ -180,11 +209,12 @@
     <div class="container pt-5">
         <div class="row align-content-center">
             <div class="col-lg-6">
-                <p class="heading-top">Say Hi To Our Team</p>
-                <h2>Creativity & Innovations <br>are our motto</h2>
-                <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet eos
-                    necessitatibus maxime assumenda aspernatur corrupti nobis provident facilis praesentium.
-                </p>
+                <?php $about_team_suptitle = get_field('about_team_suptitle', false, false); ?>
+                <p class="heading-top"><?php echo $about_team_suptitle; ?></p>
+                <?php $about_team_title = get_field('about_team_title', false, false); ?>
+                <h2><?php echo $about_team_title; ?></h2>
+                <?php $about_team_paragraph = get_field('about_team_paragraph', false, false); ?>
+                <p class="py-3"><?php echo $about_team_paragraph; ?></p>
             </div>
             <div class="col-lg-6">
                 <ul class="services-skill">

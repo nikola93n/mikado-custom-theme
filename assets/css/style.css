@@ -296,6 +296,7 @@ header a:hover::before {
     text-transform: uppercase;
     font-family: var(--font-extrabold);    
     text-align: center;
+    transition: var(--transition);  
 }
 #awards .col-md-3:hover i {
     color: var(--primary-color);
