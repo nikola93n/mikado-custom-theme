@@ -726,76 +726,211 @@
 
 
 
+            <?php $portfolio_items_portfolio_three_image = get_field('portfolio_items_portfolio_three_image'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_three_image')) : ?>
+
+            <?php $portfolio_items_portfolio_three_icon = get_field('portfolio_items_portfolio_three_icon'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_three_icon')) : ?>
+
+            <?php $portfolio_items_portfolio_three_title = get_field('portfolio_items_portfolio_three_title'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_three_title')) : ?>
+
+            <?php $portfolio_items_portfolio_three_read_more_link = get_field('portfolio_items_portfolio_three_read_more_link'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_three_read_more_link')) : ?>
+
+            <?php $portfolio_items_portfolio_three_read_more_url = get_field('portfolio_items_portfolio_three_read_more_url'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_three_read_more_url')) : ?>
+
+            <?php $portfolio_items_portfolio_three_class = get_field('portfolio_items_portfolio_three_class'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_three_class')) : ?>
 
 
 
-            <!-- <div class="col-lg-4 col-md-6 graphic-design grid-item">
+            <div class="col-lg-4 col-md-6 <?php echo $portfolio_items_portfolio_three_class; ?> grid-item">
                 <figure class="product-item">
-                    <img src="assets/images/portfolio/2.jpg" alt="" class="img-fluid">
+                    <img src="<?php echo $portfolio_items_portfolio_three_image['url']; ?>"
+                        alt="<?php echo $portfolio_items_portfolio_three_image['alt']; ?>" class="img-fluid">
                     <figcaption class="fig-caption">
-                        <i class="bi bi-search"></i>
-                        <h5 class="title mt-1">Project Name</h5>
-                        <span class="sub-title"><a href="#">Find out More</a></span>
-                    </figcaption>
-                </figure>
-            </div> -->
-            <div class="col-lg-4 col-md-6 web-design grid-item">
-                <figure class="product-item">
-                    <img src="images/portfolio/3.jpg" alt="" class="img-fluid">
-                    <figcaption class="fig-caption">
-                        <i class="bi bi-search"></i>
-                        <h5 class="title mt-1">Project Name</h5>
-                        <span class="sub-title"><a href="#">Find out More</a></span>
+                        <i class="<?php echo $portfolio_items_portfolio_three_icon; ?>"></i>
+                        <h5 class="title mt-1"><?php echo $portfolio_items_portfolio_three_title; ?></h5>
+                        <span class="sub-title"><a href="<?php echo $portfolio_items_portfolio_three_read_more_url; ?>"
+                                target="_blank"><?php echo $portfolio_items_portfolio_three_read_more_link; ?></a></span>
                     </figcaption>
                 </figure>
             </div>
-            <div class="col-lg-4 col-md-6 seo grid-item">
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+
+
+
+            <?php $portfolio_items_portfolio_four_image = get_field('portfolio_items_portfolio_four_image'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_four_image')) : ?>
+
+            <?php $portfolio_items_portfolio_four_icon = get_field('portfolio_items_portfolio_four_icon'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_four_icon')) : ?>
+
+            <?php $portfolio_items_portfolio_four_title = get_field('portfolio_items_portfolio_four_title'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_four_title')) : ?>
+
+            <?php $portfolio_items_portfolio_four_read_more_link = get_field('portfolio_items_portfolio_four_read_more_link'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_four_read_more_link')) : ?>
+
+            <?php $portfolio_items_portfolio_four_read_more_url = get_field('portfolio_items_portfolio_four_read_more_url'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_four_read_more_url')) : ?>
+
+            <?php $portfolio_items_portfolio_four_class = get_field('portfolio_items_portfolio_four_class'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_four_class')) : ?>
+
+
+
+            <div class="col-lg-4 col-md-6 <?php echo $portfolio_items_portfolio_four_class; ?> grid-item">
                 <figure class="product-item">
-                    <img src="images/portfolio/4.jpg" alt="" class="img-fluid">
+                    <img src="<?php echo $portfolio_items_portfolio_four_image['url']; ?>"
+                        alt="<?php echo $portfolio_items_portfolio_four_image['alt']; ?>" class="img-fluid">
                     <figcaption class="fig-caption">
-                        <i class="bi bi-search"></i>
-                        <h5 class="title mt-1">Project Name</h5>
-                        <span class="sub-title"><a href="#">Find out More</a></span>
+                        <i class="<?php echo $portfolio_items_portfolio_four_icon; ?>"></i>
+                        <h5 class="title mt-1"><?php echo $portfolio_items_portfolio_four_title; ?></h5>
+                        <span class="sub-title"><a href="<?php echo $portfolio_items_portfolio_four_read_more_url; ?>"
+                                target="_blank"><?php echo $portfolio_items_portfolio_four_read_more_link; ?></a></span>
                     </figcaption>
                 </figure>
             </div>
-            <div class="col-lg-4 col-md-6 instagram-management grid-item">
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+
+            <?php $portfolio_items_portfolio_five_image = get_field('portfolio_items_portfolio_five_image'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_five_image')) : ?>
+
+            <?php $portfolio_items_portfolio_five_icon = get_field('portfolio_items_portfolio_five_icon'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_five_icon')) : ?>
+
+            <?php $portfolio_items_portfolio_five_title = get_field('portfolio_items_portfolio_five_title'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_five_title')) : ?>
+
+            <?php $portfolio_items_portfolio_five_read_more_link = get_field('portfolio_items_portfolio_five_read_more_link'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_five_read_more_link')) : ?>
+
+            <?php $portfolio_items_portfolio_five_read_more_url = get_field('portfolio_items_portfolio_five_read_more_url'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_five_read_more_url')) : ?>
+
+            <?php $portfolio_items_portfolio_five_class = get_field('portfolio_items_portfolio_five_class'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_five_class')) : ?>
+
+
+
+            <div class="col-lg-4 col-md-6 <?php echo $portfolio_items_portfolio_five_class; ?> grid-item">
                 <figure class="product-item">
-                    <img src="images/portfolio/5.jpg" alt="" class="img-fluid">
+                    <img src="<?php echo $portfolio_items_portfolio_five_image['url']; ?>"
+                        alt="<?php echo $portfolio_items_portfolio_five_image['alt']; ?>" class="img-fluid">
                     <figcaption class="fig-caption">
-                        <i class="bi bi-search"></i>
-                        <h5 class="title mt-1">Project Name</h5>
-                        <span class="sub-title"><a href="#">Find out More</a></span>
+                        <i class="<?php echo $portfolio_items_portfolio_five_icon; ?>"></i>
+                        <h5 class="title mt-1"><?php echo $portfolio_items_portfolio_five_title; ?></h5>
+                        <span class="sub-title"><a href="<?php echo $portfolio_items_portfolio_five_read_more_url; ?>"
+                                target="_blank"><?php echo $portfolio_items_portfolio_five_read_more_link; ?></a></span>
                     </figcaption>
                 </figure>
             </div>
-            <div class="col-lg-4 col-md-6 graphic-design grid-item">
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+
+            <?php $portfolio_items_portfolio_six_image = get_field('portfolio_items_portfolio_six_image'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_six_image')) : ?>
+
+            <?php $portfolio_items_portfolio_six_icon = get_field('portfolio_items_portfolio_six_icon'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_six_icon')) : ?>
+
+            <?php $portfolio_items_portfolio_six_title = get_field('portfolio_items_portfolio_six_title'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_six_title')) : ?>
+
+            <?php $portfolio_items_portfolio_six_read_more_link = get_field('portfolio_items_portfolio_six_read_more_link'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_six_read_more_link')) : ?>
+
+            <?php $portfolio_items_portfolio_six_read_more_url = get_field('portfolio_items_portfolio_six_read_more_url'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_six_read_more_url')) : ?>
+
+            <?php $portfolio_items_portfolio_six_class = get_field('portfolio_items_portfolio_six_class'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_six_class')) : ?>
+
+
+
+            <div class="col-lg-4 col-md-6 <?php echo $portfolio_items_portfolio_six_class; ?> grid-item">
                 <figure class="product-item">
-                    <img src="images/portfolio/6.jpg" alt="" class="img-fluid">
+                    <img src="<?php echo $portfolio_items_portfolio_six_image['url']; ?>"
+                        alt="<?php echo $portfolio_items_portfolio_six_image['alt']; ?>" class="img-fluid">
                     <figcaption class="fig-caption">
-                        <i class="bi bi-search"></i>
-                        <h5 class="title mt-1">Project Name</h5>
-                        <span class="sub-title"><a href="#">Find out More</a></span>
+                        <i class="<?php echo $portfolio_items_portfolio_six_icon; ?>"></i>
+                        <h5 class="title mt-1"><?php echo $portfolio_items_portfolio_six_title; ?></h5>
+                        <span class="sub-title"><a href="<?php echo $portfolio_items_portfolio_six_read_more_url; ?>"
+                                target="_blank"><?php echo $portfolio_items_portfolio_six_read_more_link; ?></a></span>
                     </figcaption>
                 </figure>
             </div>
-            <div class="col-lg-4 col-md-6 seo grid-item">
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+
+            <?php $portfolio_items_portfolio_seven_image = get_field('portfolio_items_portfolio_seven_image'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_seven_image')) : ?>
+
+            <?php $portfolio_items_portfolio_seven_icon = get_field('portfolio_items_portfolio_seven_icon'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_seven_icon')) : ?>
+
+            <?php $portfolio_items_portfolio_seven_title = get_field('portfolio_items_portfolio_seven_title'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_seven_title')) : ?>
+
+            <?php $portfolio_items_portfolio_seven_read_more_link = get_field('portfolio_items_portfolio_seven_read_more_link'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_seven_read_more_link')) : ?>
+
+            <?php $portfolio_items_portfolio_seven_read_more_url = get_field('portfolio_items_portfolio_seven_read_more_url'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_seven_read_more_url')) : ?>
+
+            <?php $portfolio_items_portfolio_seven_class = get_field('portfolio_items_portfolio_seven_class'); ?>
+            <?php if(!empty('$portfolio_items_portfolio_seven_class')) : ?>
+
+
+
+            <div class="col-lg-4 col-md-6 <?php echo $portfolio_items_portfolio_seven_class; ?> grid-item">
                 <figure class="product-item">
-                    <img src="images/portfolio/7.jpg" alt="" class="img-fluid">
+                    <img src="<?php echo $portfolio_items_portfolio_seven_image['url']; ?>"
+                        alt="<?php echo $portfolio_items_portfolio_seven_image['alt']; ?>" class="img-fluid">
                     <figcaption class="fig-caption">
-                        <i class="bi bi-search"></i>
-                        <h5 class="title mt-1">Project Name</h5>
-                        <span class="sub-title"><a href="#">Find out More</a></span>
+                        <i class="<?php echo $portfolio_items_portfolio_seven_icon; ?>"></i>
+                        <h5 class="title mt-1"><?php echo $portfolio_items_portfolio_seven_title; ?></h5>
+                        <span class="sub-title"><a href="<?php echo $portfolio_items_portfolio_seven_read_more_url; ?>"
+                                target="_blank"><?php echo $portfolio_items_portfolio_seven_read_more_link; ?></a></span>
                     </figcaption>
                 </figure>
             </div>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
+            <?php endif; ?>
         </div>
     </div>
 </section>
 <!-- End Portfolio Section -->
 
 <!-- Start Testimonials Section -->
-<section id="testimonials" class="parallax" style="background-image: url(images/bg-testimonials.jpg);">
+<?php $clients_background_image = get_field('clients_background_image'); ?>
+<section id="testimonials" class="parallax"
+    style="background-image: url(<?php echo $clients_background_image['url']; ?>);">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-6 p-5">
