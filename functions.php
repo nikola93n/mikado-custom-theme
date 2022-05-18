@@ -56,3 +56,8 @@ function register_my_menus() {
    );
  }
  add_action( 'init', 'register_my_menus' );
+
+/**
+ * Hide ACF menu if not local
+ */
+//  add_filter('acf/settings/show_admin', '__return_false');

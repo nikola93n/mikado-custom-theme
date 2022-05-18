@@ -43,8 +43,6 @@
                             'container' => 'ul',
                             'menu_class'=> 'd-flex main-menu'
                         ) );
-
-
                         ?>
                     </nav>
                     <button class="hamburger">

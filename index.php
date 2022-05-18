@@ -936,69 +936,117 @@
             <div class="col-lg-6 offset-lg-6 p-5">
                 <div class="swiper swiper-testimonials">
                     <div class="swiper-wrapper">
+                        <?php $testimonials_testimonial_one_text = get_field('testimonials_testimonial_one_text', false, false); ?>
+                        <?php if(!empty('$testimonials_testimonial_one_text')): ?>
+                        <?php $testimonials_testimonial_one_name = get_field('testimonials_testimonial_one_name'); ?>
+                        <?php if(!empty('$testimonials_testimonial_one_name')): ?>
+                        <?php $testimonials_testimonial_one_position = get_field('testimonials_testimonial_one_position'); ?>
                         <div class="swiper-slide p-4">
                             <i class="bi bi-chat-square-quote"></i>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aut sapiente natus
-                                vitae, saepe quam eos, praesentium architecto ab facere, ipsam molestias beatae
-                                cumque nihil vero maxime. Esse necessitatibus deserunt eos illo, neque voluptates
-                                amet ducimus inventore commodi voluptatibus? Laudantium.</p>
+                            <p><?php echo $testimonials_testimonial_one_text; ?></p>
                             <div class="client d-flex pt-3">
-                                <img src="images/User.png" alt="">
+                                <?php $testimonials_testimonial_one_image = get_field('testimonials_testimonial_one_image');
+                            if( !empty( $testimonials_testimonial_one_image ) ): ?>
+                                <img src="<?php echo esc_url($testimonials_testimonial_one_image['url']); ?>"
+                                    alt="<?php echo esc_attr($testimonials_testimonial_one_image['alt']); ?>" />
+                                <?php endif; ?>
                                 <div class="rating ps-4 d-flex flex-column justify-content-center">
-                                    <p class="m-0">Glen Jarret</p>
-                                    <p class="m-0">HR Manager</p>
+                                    <p class="m-0"><?php echo $testimonials_testimonial_one_name; ?></p>
+                                    <p class="m-0"><?php echo $testimonials_testimonial_one_position; ?></p>
                                     <div class="stars">
+                                        <?php $testimonials_testimonial_one_stars = get_field('testimonials_testimonial_one_stars', false, false); ?>
+                                        <?php if($testimonials_testimonial_one_stars == 'one') : ?>
                                         <span><i class="bi bi-star-fill"></i></span>
-                                        <span><i class="bi bi-star-fill"></i></span>
-                                        <span><i class="bi bi-star-fill"></i></span>
-                                        <span><i class="bi bi-star-fill"></i></span>
-                                        <span><i class="bi bi-star-fill"></i></span>
+                                        <?php elseif ($testimonials_testimonial_one_stars == 'two') : ?>
+                                        <?php echo str_repeat('<span><i class="bi bi-star-fill"></i></span>', 2); ?>
+                                        <?php elseif ($testimonials_testimonial_one_stars == 'three') : ?>
+                                        <?php echo str_repeat('<span><i class="bi bi-star-fill"></i></span>', 3); ?>
+                                        <?php elseif ($testimonials_testimonial_one_stars == 'four') : ?>
+                                        <?php echo str_repeat('<span><i class="bi bi-star-fill"></i></span>', 4); ?>
+                                        <?php elseif ($testimonials_testimonial_one_stars == 'five') : ?>
+                                        <?php echo str_repeat('<span><i class="bi bi-star-fill"></i></span>', 5); ?>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <?php endif; ?>
+                        <?php endif; ?>
+
+                        <?php $testimonials_testimonial_twoo_text = get_field('testimonials_testimonial_twoo_text', false, false); ?>
+                        <?php if(!empty('$testimonials_testimonial_twoo_text')): ?>
+                        <?php $testimonials_testimonial_twoo_name = get_field('testimonials_testimonial_twoo_name'); ?>
+                        <?php if(!empty('$testimonials_testimonial_twoo_name')): ?>
+                        <?php $testimonials_testimonial_twoo_position = get_field('testimonials_testimonial_twoo_position'); ?>
                         <div class="swiper-slide p-4">
                             <i class="bi bi-chat-square-quote"></i>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aut sapiente natus
-                                vitae, saepe quam eos, praesentium architecto ab facere, ipsam molestias beatae
-                                cumque nihil vero maxime. Esse necessitatibus deserunt eos illo, neque voluptates
-                                amet ducimus inventore commodi voluptatibus? Laudantium.</p>
+                            <p><?php echo $testimonials_testimonial_twoo_text; ?></p>
                             <div class="client d-flex pt-3">
-                                <img src="images/User.png" alt="">
+                                <?php $testimonials_testimonial_twoo_image = get_field('testimonials_testimonial_twoo_image');
+                            if( !empty( $testimonials_testimonial_twoo_image ) ): ?>
+                                <img src="<?php echo esc_url($testimonials_testimonial_twoo_image['url']); ?>"
+                                    alt="<?php echo esc_attr($testimonials_testimonial_twoo_image['alt']); ?>" />
+                                <?php endif; ?>
                                 <div class="rating ps-4 d-flex flex-column justify-content-center">
-                                    <p class="m-0">Ian Markel</p>
-                                    <p class="m-0">Dev</p>
+                                    <p class="m-0"><?php echo $testimonials_testimonial_twoo_name; ?></p>
+                                    <p class="m-0"><?php echo $testimonials_testimonial_twoo_position; ?></p>
                                     <div class="stars">
+                                        <?php $testimonials_testimonial_twoo_stars = get_field('testimonials_testimonial_twoo_stars', false, false); ?>
+                                        <?php if($testimonials_testimonial_twoo_stars == 'one') : ?>
                                         <span><i class="bi bi-star-fill"></i></span>
-                                        <span><i class="bi bi-star-fill"></i></span>
-                                        <span><i class="bi bi-star-fill"></i></span>
-                                        <span><i class="bi bi-star-fill"></i></span>
-                                        <span><i class="bi bi-star-fill"></i></span>
+                                        <?php elseif ($testimonials_testimonial_twoo_stars == 'two') : ?>
+                                        <?php echo str_repeat('<span><i class="bi bi-star-fill"></i></span>', 5); ?>
+                                        <?php elseif ($testimonials_testimonial_twoo_stars == 'three') : ?>
+                                        <?php echo str_repeat('<span><i class="bi bi-star-fill"></i></span>', 3); ?>
+                                        <?php elseif ($testimonials_testimonial_twoo_stars == 'four') : ?>
+                                        <?php echo str_repeat('<span><i class="bi bi-star-fill"></i></span>', 4); ?>
+                                        <?php elseif ($testimonials_testimonial_twoo_stars == 'five') : ?>
+                                        <?php echo str_repeat('<span><i class="bi bi-star-fill"></i></span>', 5); ?>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <?php endif; ?>
+                        <?php endif; ?>
+
+                        <?php $testimonials_testimonial_threee_text = get_field('testimonials_testimonial_threee_text', false, false); ?>
+                        <?php if(!empty('$testimonials_testimonial_threee_text')): ?>
+                        <?php $testimonials_testimonial_threee_name = get_field('testimonials_testimonial_threee_name'); ?>
+                        <?php if(!empty('$testimonials_testimonial_threee_name')): ?>
+                        <?php $testimonials_testimonial_threee_position = get_field('testimonials_testimonial_threee_position'); ?>
                         <div class="swiper-slide p-4">
                             <i class="bi bi-chat-square-quote"></i>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aut sapiente natus
-                                vitae, saepe quam eos, praesentium architecto ab facere, ipsam molestias beatae
-                                cumque nihil vero maxime. Esse necessitatibus deserunt eos illo, neque voluptates
-                                amet ducimus inventore commodi voluptatibus? Laudantium.</p>
+                            <p><?php echo $testimonials_testimonial_threee_text; ?></p>
                             <div class="client d-flex pt-3">
-                                <img src="images/User.png" alt="">
+                                <?php 
+                            $testimonials_testimonial_threee_image = get_field('testimonials_testimonial_threee_image');
+                            if( !empty( $testimonials_testimonial_threee_image ) ): ?>
+                                <img src="<?php echo esc_url($testimonials_testimonial_threee_image['url']); ?>"
+                                    alt="<?php echo esc_attr($testimonials_testimonial_threee_image['alt']); ?>" />
+                                <?php endif; ?>
                                 <div class="rating ps-4 d-flex flex-column justify-content-center">
-                                    <p class="m-0">John Doe</p>
-                                    <p class="m-0">Photographer</p>
+                                    <p class="m-0"><?php echo $testimonials_testimonial_threee_name; ?></p>
+                                    <p class="m-0"><?php echo $testimonials_testimonial_threee_position; ?></p>
                                     <div class="stars">
+                                        <?php $testimonials_testimonial_threee_stars = get_field('testimonials_testimonial_threee_stars', false, false); ?>
+                                        <?php if($testimonials_testimonial_threee_stars == 'one') : ?>
                                         <span><i class="bi bi-star-fill"></i></span>
-                                        <span><i class="bi bi-star-fill"></i></span>
-                                        <span><i class="bi bi-star-fill"></i></span>
-                                        <span><i class="bi bi-star-fill"></i></span>
-                                        <span><i class="bi bi-star-fill"></i></span>
+                                        <?php elseif ($testimonials_testimonial_threee_stars == 'two') : ?>
+                                        <?php echo str_repeat('<span><i class="bi bi-star-fill"></i></span>', 2); ?>
+                                        <?php elseif ($testimonials_testimonial_threee_stars == 'three') : ?>
+                                        <?php echo str_repeat('<span><i class="bi bi-star-fill"></i></span>', 3); ?>
+                                        <?php elseif ($testimonials_testimonial_threee_stars == 'four') : ?>
+                                        <?php echo str_repeat('<span><i class="bi bi-star-fill"></i></span>', 4); ?>
+                                        <?php elseif ($testimonials_testimonial_threee_stars == 'five') : ?>
+                                        <?= str_repeat('<span><i class="bi bi-star-fill"></i></span>', 5) ?>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <?php endif; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -1006,63 +1054,21 @@
     </div>
 </section>
 <!-- End Testimonials Section -->
-<!-- Start Blog Section -->
-<section id="blog" class="py-5">
-    <div class="container">
-        <div class="row text-center">
-            <p class="heading-top">See Our Recent News</p>
-            <h2>Latest Blog</h2>
-        </div>
-        <div class="row py-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="card mb-3">
-                    <img src="images/blog-1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body px-4">
-                        <p class="meta">April 21, 2022</p>
-                        <h5 class="card-title">Web design is fun</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <div class="author d-flex align-items-center">
-                            <img src="images/avatar-1.png" alt="">
-                            <p class="author-name m-0 ps-3">Hena Sword</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card mb-3">
-                    <img src="images/blog-2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body px-4">
-                        <p class="meta">April 21, 2022</p>
-                        <h5 class="card-title">Web design is fun</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <div class="author d-flex align-items-center">
-                            <img src="images/avatar-2.png" alt="">
-                            <p class="author-name m-0 ps-3">David Villas</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card mb-3">
-                    <img src="images/blog-3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body px-4">
-                        <p class="meta">April 21, 2022</p>
-                        <h5 class="card-title">Web design is fun</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <div class="author d-flex align-items-center">
-                            <img src="images/avatar-3.png" alt="">
-                            <p class="author-name m-0 ps-3">Teena Walker</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- Start CTA Section -->
+<?php $contact_background_color = get_field('contact_background_color'); ?>
+<?php $contact_button_text = get_field('contact_button_text'); ?>
+<?php $contact_button_url = get_field('contact_button_url'); ?>
+<?php $contact_paragraph = get_field('contact_paragraph'); ?>
+<?php if(!empty('$contact_paragraph')) : ?>
+<section class="cta py-5" style="background-color: <?php echo $contact_background_color; ?>;">
+    <div class="container d-flex justify-content-between align-items-center">
+        <p><?php echo $contact_paragraph; ?></p>
+        <a href="<?php echo $contact_button_url; ?>"
+            class="btn-primary text-nowrap"><?php echo $contact_button_text; ?></a>
     </div>
 </section>
-<!-- End Blog Section -->
+<?php endif; ?>
+<!-- End CTA Section -->
 
 <!-- Start Contact Section -->
 <section id="contact">
@@ -1072,51 +1078,11 @@
             <h2>Let's Get In Touch</h2>
         </div>
         <!-- Form -->
-        <form id="contact-form-data" class="contact-form" action="">
-            <div class="row">
-                <div class="col-md-6 col-sm-6">
-                    <div class="form-group">
-                        <input id="first-name" class="form-control" type="text" placeholder="First Name:" required=""
-                            name="firstName">
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="form-group">
-                        <input id="last-name" class="form-control" type="text" placeholder="Last Name:" required=""
-                            name="lastName">
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="form-group">
-                        <input id="mail" class="form-control" type="email" placeholder="Email:" required=""
-                            name="userEmail">
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="form-group">
-                        <input id="phone" class="form-control" type="tel" placeholder="Phone:" required=""
-                            name="userPhone">
-                    </div>
-                </div>
-                <div class="col-md-12 col-sm-12">
-                    <div class="form-group">
-                        <textarea id="message" class="form-control" placeholder="Message" required=""
-                            name="userMessage"></textarea>
-                    </div>
-                </div>
-                <div class="col-md-12 col-sm-12">
-                    <div class="form-group text-start">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Privacy Policy</label>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="form-group text-center mt-3">
-                        <button id="submit" class="btn-primary" type="button">Contact Now</button>
-                    </div>
-                </div>
-            </div>
-        </form>
+        <?php $contact_contact_form = get_field('contact_contact_form'); ?>
+        <div class="contact-form">
+            <?php echo do_shortcode(get_field('contact_contact_form')); ?>
+
+        </div>
     </div>
 </section>
 <!-- End Contact Section -->
