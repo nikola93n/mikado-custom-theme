@@ -61,3 +61,7 @@ function register_my_menus() {
  * Hide ACF menu if not local
  */
 //  add_filter('acf/settings/show_admin', '__return_false');
+
+
+// Enqueue editing the Footer from customizer
+require_once get_template_directory() . '/inc/customizer.php';
