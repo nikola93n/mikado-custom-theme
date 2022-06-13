@@ -10,6 +10,7 @@ function load_scripts(){
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/vendors/css/bootstrap.min.css', array(), '5.0.2', 'all');
     wp_enqueue_style('bootstrap-icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css', array(), '1.3.0', 'all');
     wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/vendors/css/swiper-bundle.min.css', array(), '1.0', 'all');
+    wp_enqueue_style('my-project-style', get_template_directory_uri() . '/assets/css/project-style.css', array(), '1.0', 'all');    
     wp_enqueue_style('my-style', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0', 'all');    
 
     // wp_enqueue_style( 'nunito-light', get_template_directory_uri() . '/assets/fonts/Nunito-Light.ttf', false );

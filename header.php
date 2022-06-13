@@ -20,7 +20,7 @@
         <!-- Start Header Section -->
         <div class="container">
             <div class="row">
-                <header class="mt-4 d-flex justify-content-between align-items-center">
+                <header class="mt-4 pb-4 d-flex justify-content-between align-items-center">
 
                     <?php
                     $custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -41,7 +41,7 @@
                         <?php wp_nav_menu( array(
                             'theme_location' => 'header-menu',
                             'container' => 'ul',
-                            'menu_class'=> 'd-flex main-menu'
+                            'menu_class'=> 'd-flex align-items-center main-menu'
                         ) );
                         ?>
                     </nav>
